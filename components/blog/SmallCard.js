@@ -9,30 +9,30 @@ const SmallCard = ({ blog }) => {
     return (
         <div className="card">
             <section>
-                <Link href={`/blogs/${blog.slug}`}>
+                <a href={`/blogs/${blog.slug}`}>
                     <a>
                         <img className="img img-fluid" style={{ maxHeight: '150px', width: '100%' }} src={`${API}/blog/photo/${blog.slug}`} alt={blog.title}></img>
 
                     </a>
-                </Link>
+                </a>
             </section>
             <div className="card-body">
                 <section>
-                    <Link href={`/blogs/${blog.slug}`}>
+                    <a href={`/blogs/${blog.slug}`}>
                         <a className="card-title">{blog.title}</a>
-                    </Link>
+                    </a>
                     <p className="card-text">{renderHTML(blog.excerpt)}</p>
                 </section>
             </div>
 
             <div className="card-body">
-                <Link href={`/blogs/${blog.slug}`}>
+                <a href={`/blogs/${blog.slug}`}>
                     <a >Read more...</a>
-                </Link>
+                </a>
                 <div>
                     Posted {moment(blog.updatedAt).fromNow()} by {''}
-                Written by <Link href={`/profile/${blog.postedBy.username}`}>
-                        <a>{blog.postedBy.username}</a></Link>
+                Written by <a href={`/profile/${blog.postedBy.username}`}>
+                        <a>{blog.postedBy.username}</a></a>
                                              | Published {moment(blog.updatedAt).fromNow()}
 
 

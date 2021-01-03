@@ -58,7 +58,7 @@ const Tag = () => {
     };
 
     const clickSubmit = e => {
-        e.preventDefault();
+        //e.preventDefault();
         create({ name }, token).then(data => {
             if (data.error) {
                 setValues({ ...values, error: data.error, success: false });

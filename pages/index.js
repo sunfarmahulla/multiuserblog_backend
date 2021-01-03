@@ -41,11 +41,11 @@ const Index = () => {
                                     <h2 className="text-shadow text-center h1">React</h2>
                                 </div>
                                 <div className="back text-center">
-                                    <Link href="/categories/react">
+                                    <a href="/categories/react">
                                         <a>
                                             <h3 className="h1">React Js</h3>
                                         </a>
-                                    </Link>
+                                    </a>
                                     <p className="lead">The world's most popular frontend web development library</p>
                                 </div>
                             </div>
@@ -65,11 +65,11 @@ const Index = () => {
                                     <h2 className="text-shadow text-center h1">Node</h2>
                                 </div>
                                 <div className="back text-center">
-                                    <Link href="/categories/node">
+                                    <a href="/categories/node">
                                         <a>
                                             <h3 className="h1">Node Js</h3>
                                         </a>
-                                    </Link>
+                                    </a>
                                     <p className="lead">
                                         The worlds most popular backend development tool for JavaScript Ninjas
                                     </p>
@@ -91,11 +91,11 @@ const Index = () => {
                                     <h2 className="text-shadow text-center h1">Next</h2>
                                 </div>
                                 <div className="back text-center">
-                                    <Link href="/categories/nextjs">
+                                    <a href="/categories/nextjs">
                                         <a>
                                             <h3 className="h1">Next Js</h3>
                                         </a>
-                                    </Link>
+                                    </a>
                                     <p className="lead">A Production ready web framework for building SEO React apps</p>
                                 </div>
                             </div>

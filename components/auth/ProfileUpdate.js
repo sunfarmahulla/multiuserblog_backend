@@ -55,7 +55,7 @@ const ProfileUpdate = () => {
     };
 
     const handleSubmit = e => {
-        e.preventDefault();
+      //  e.preventDefault();
         setValues({ ...values, loading: true });
         update(token, userData).then(data => {
             if (data.error) {

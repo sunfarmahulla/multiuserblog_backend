@@ -7,16 +7,16 @@ const Card = ({ blog }) => {
 
     const showBlogCategories = blog =>
         blog.categories.map((c, i) => (
-            <Link key={i} href={`/categories/${c.slug}`}>
+            <a key={i} href={`/categories/${c.slug}`}>
                 <a className="btn btn-primary mr-1 ml-1 mt-3">{c.name}</a>
-            </Link>
+            </a>
         ));
 
     const showBlogTags = blog =>
         blog.tags.map((t, i) => (
-            <Link key={i} href={`/tags/${t.slug}`}>
+            <a key={i} href={`/tags/${t.slug}`}>
                 <a className="btn btn-outline-primary mr-1 ml-1 mt-3">{t.name}</a>
-            </Link>
+            </a>
         ));
 
 
@@ -24,14 +24,14 @@ const Card = ({ blog }) => {
     return (
         <div className="lead pd-4">
             <header>
-                <Link href={`/blogs/${blog.slug}`}>
+                <a href={`/blogs/${blog.slug}`}>
                     <a><h3 className="pt-3 pd-3 font-weight-bold">{blog.title}</h3></a>
-                </Link>
+                </a>
             </header>
             <section>
                 <p className="mark ml-1 pt-2 pd-2">
-                    Written by<Link href={`/profile/${blog.postedBy.username}`}>
-                        <a>{blog.postedBy.username}</a></Link>
+                    Written by<a href={`/profile/${blog.postedBy.username}`}>
+                        <a>{blog.postedBy.username}</a></a>
                                              | Published {moment(blog.updatedAt).fromNow()}
 
                 </p>
@@ -55,9 +55,9 @@ const Card = ({ blog }) => {
                     <section>
                         <div className="pd-3">{renderHTML(blog.excerpt)}</div>
 
-                        <Link href={`/blogs/${blog.slug}`}>
+                        <a href={`/blogs/${blog.slug}`}>
                             <a className="btn btn-primary pt-2">Read more...</a>
-                        </Link>
+                        </a>
                     </section>
                 </div>
             </div>

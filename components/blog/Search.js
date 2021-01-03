@@ -14,7 +14,7 @@ const Search = () => {
     const { search, results, searched, message } = values;
 
     const searchSubmit = e => {
-        e.preventDefault();
+        //e.preventDefault();
         listSearch({ search }).then(data => {
             setValues({ ...values, results: data, searched: true, message: `${data.length} blogs found` });
         });
@@ -33,9 +33,9 @@ const Search = () => {
                 {results.map((blog, i) => {
                     return (
                         <div key={i}>
-                            <Link href={`/blogs/${blog.slug}`}>
+                            <a href={`/blogs/${blog.slug}`}>
                                 <a className="text-primary">{blog.title}</a>
-                            </Link>
+                            </a>
                         </div>
                     );
                 })}

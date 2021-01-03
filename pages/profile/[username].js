@@ -31,9 +31,9 @@ const UserProfile = ({ user, blogs, query }) => {
         return blogs.map((blog, i) => {
             return (
                 <div className="mt-4 mb-4" key={i}>
-                    <Link href={`/blogs/${blog.slug}`}>
+                    <a href={`/blogs/${blog.slug}`}>
                         <a className="lead">{blog.title}</a>
-                    </Link>
+                    </a>
                 </div>
             );
         });

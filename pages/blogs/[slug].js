@@ -52,16 +52,16 @@ const SingleBlog = ({ blog, query }) => {
 
     const showBlogCategories = blog =>
         blog.categories.map((c, i) => (
-            <Link key={i} href={`/categories/${c.slug}`}>
+            <a key={i} href={`/categories/${c.slug}`}>
                 <a className="btn btn-primary mr-1 ml-1 mt-3">{c.name}</a>
-            </Link>
+            </a>
         ));
 
     const showBlogTags = blog =>
         blog.tags.map((t, i) => (
-            <Link key={i} href={`/tags/${t.slug}`}>
+            <a key={i} href={`/tags/${t.slug}`}>
                 <a className="btn btn-outline-primary mr-1 ml-1 mt-3">{t.name}</a>
-            </Link>
+            </a>
         ));
 
 
@@ -117,8 +117,8 @@ const SingleBlog = ({ blog, query }) => {
                                     <h1 className="display-2 pb-3 pt-3 text-center font-weight-bold">{blog.title}</h1>
                                     <p className="lead mt-3 mark">
 
-                                        Written by<Link href={`/profile/${blog.postedBy.username}`}>
-                                            <a>{blog.postedBy.username}</a></Link>
+                                        Written by<a href={`/profile/${blog.postedBy.username}`}>
+                                            <a>{blog.postedBy.username}</a></a>
                                              | Published {moment(blog.updatedAt).fromNow()}
                                     </p>
 

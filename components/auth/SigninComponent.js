@@ -21,7 +21,7 @@ const SigninComponent = () => {
     }, []);
 
     const handleSubmit = e => {
-        e.preventDefault();
+        //e.preventDefault();
         setValues({ ...values, loading: true, error: false });
         const user = { email, password };
 

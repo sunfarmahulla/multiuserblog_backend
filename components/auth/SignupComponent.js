@@ -22,7 +22,7 @@ const SignupComponent = () => {
 
 
     const handleSubmit = e => {
-        e.preventDefault();
+        //e.preventDefault();
         setValues({ ...values, loading: true, error: false });
         const user = { name, email, password };
 

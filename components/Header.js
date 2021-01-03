@@ -31,7 +31,7 @@ const Header = (props) => {
     <div>
       <React.Fragment>
         <Navbar color="light" light expand="md">
-          <Link href="/"><NavLink className="font-weight-bold">SEOBLOG</NavLink></Link>
+          <a href="/"><NavLink className="font-weight-bold">SEOBLOG</NavLink></a>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -45,7 +45,9 @@ const Header = (props) => {
 
               <React.Fragment>
                 <NavItem>
-                  <a style={{ cursor: 'pointer' }} href="/blogs">Blogs</a>
+                <NavLink>
+                  <a className="pd-5" style={{ cursor: 'pointer' }} href="/blogs">Blogs</a>
+                  </NavLink>
                 </NavItem>
               </React.Fragment>
 
@@ -53,30 +55,30 @@ const Header = (props) => {
               {!isAuth() && (
                 <React.Fragment>
                   <NavItem>
-                    <Link href="/signup"><NavLink style={{ cursor: 'pointer' }}>Signup</NavLink></Link>
+                    <a href="/signup"><NavLink style={{ cursor: 'pointer' }}>Signup</NavLink></a>
                   </NavItem>
                   <NavItem>
-                    <Link href="/signin"><NavLink style={{ cursor: 'pointer' }}>Signin</NavLink></Link>
+                    <a href="/signin"><NavLink style={{ cursor: 'pointer' }}>Signin</NavLink></a>
                   </NavItem>
                 </React.Fragment>
               )}
 
               {isAuth() && !isAuth().role == 0 && (
                 <NavItem>
-                  <Link href="/user">
+                  <a href="/user">
                     <NavLink>
                       {`${isAuth().name}'s Dashboard`}
                     </NavLink>
-                  </Link>
+                  </a>
                 </NavItem>
               )}
               {isAuth() && !isAuth().role == 1 && (
                 <NavItem>
-                  <Link href="/admin">
+                  <a href="/admin">
                     <NavLink>
                       {`${isAuth().name}'s Dashboard`}
                     </NavLink>
-                  </Link>
+                  </a>
                 </NavItem>
               )}
 
@@ -89,11 +91,11 @@ const Header = (props) => {
               )}
 
               <NavItem>
-                <Link href="/user/crud/blog">
+                <a href="/user/crud/blog">
                   <NavLink className="btn btn-primary text-light">
                     Write a blog
                   </NavLink>
-                </Link>
+                </a>
               </NavItem>
             </Nav>
           </Collapse>
